@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Tooltip as ReactTooltip} from "react-tooltip";
 
 function App() {
   return (
@@ -10,14 +11,10 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="App-link" id="tooltip" data-tooltip-content="hello world">
           Learn React
-        </a>
+        </div>
+        <ReactTooltip anchorId="tooltip"/>
       </header>
     </div>
   );
